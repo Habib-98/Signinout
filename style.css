@@ -1,0 +1,111 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+    background: rgba(187,187,245);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 0 35px 15px rgba(0,0.0,0.26);
+    perspective: 1000px;
+}
+.inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,100,0.8),rgba(0,0,100,0.8)),url(hb.png);
+    padding: 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+.card-back{
+    transform: rotateY(180deg);
+}
+.card h2{
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-box{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin: 5px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #fff;
+
+}
+::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
+button{
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    margin: 5px 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.submit-btn{
+    position: relative;
+    margin-top: 10px;
+}
+.submit-btn::after{
+    content: '\27a4';
+    color: #333;
+    line-height: 32px;
+    font-size: 15px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+span{
+    font-size: 12px;
+    margin-left: 10px;
+}
+.card .btn{
+    margin-top: 100px;
+}
+.card a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12;
+    margin-top: 8px;
+}
